@@ -12,7 +12,7 @@ public class MovePlaneC : MonoBehaviour
     GameObject newPlane;
     void Start()
     {
-        GameObject initialPlane = Instantiate(planePrefab, new Vector3(0,0,92f), Quaternion.identity, gameObject.transform);
+        GameObject initialPlane = Instantiate(planePrefab, new Vector3(0, 0, 92f), Quaternion.Euler(0f, 90f, 0f), gameObject.transform);
         lastAddedPlane = initialPlane.transform;
     }
 
@@ -40,7 +40,7 @@ public class MovePlaneC : MonoBehaviour
         print("plane added");
         isPlaneAdded = true;
         // Instantiate a new plane and position it at the end of the last added plane
-         newPlane = Instantiate(planePrefab, lastAddedPlane.transform.position + new Vector3(0, 0, 200f), Quaternion.identity, gameObject.transform);
+         newPlane = Instantiate(planePrefab, lastAddedPlane.transform.position + new Vector3(0, 0, 200f), Quaternion.Euler(0f,90f,0f), gameObject.transform);
         
     }
 
