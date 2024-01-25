@@ -7,6 +7,7 @@ using TMPro;
 
 public class PlayerSL : MonoBehaviour
 {
+    public ChooseNumberOfPlayer choose_Num_Of_Player;
     public Vector3 initialPosition;
     public GameObject start;
     public bool isPlayerTurn = false;
@@ -227,7 +228,19 @@ public class PlayerSL : MonoBehaviour
                 diceRoller.redPlayer.isPlayerTurn = false;
                 
                 gamemanagerobj.StopCoroutine();
-                gamemanagerobj.count = 2;
+                if (choose_Num_Of_Player.numberOfPlayerChosen == 2)
+                {
+                    gamemanagerobj.count = 3;
+                }
+                else if (choose_Num_Of_Player.numberOfPlayerChosen == 3)
+                {
+                    gamemanagerobj.count = 3;
+                }
+                else
+                {
+                    gamemanagerobj.count = 2;
+                }
+                
                 diceRoller.canRoll = true;
                 gamemanagerobj.StartMyCoroutine();
 
@@ -247,7 +260,15 @@ public class PlayerSL : MonoBehaviour
                 
                 gamemanagerobj.StopCoroutine();
                 diceRoller.canRoll = true;
-                gamemanagerobj.count = 4;
+                if (choose_Num_Of_Player.numberOfPlayerChosen == 2)
+                {
+                    gamemanagerobj.count = 1;
+                }
+                else
+                {
+                    gamemanagerobj.count = 4;
+                }
+                
                 gamemanagerobj.StartMyCoroutine();
             }
             else

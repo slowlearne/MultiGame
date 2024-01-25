@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManagerSL : MonoBehaviour
 {
+    public ChooseNumberOfPlayer choose_Num_Of_Player_Obj;
     public AudioSource audiosource;
     public  GameObject player1, player2, player3, player4;
     public DiceRoller diceObject;
@@ -15,6 +16,7 @@ public class GameManagerSL : MonoBehaviour
     public static Dictionary<string, List<GameObject>> Ladderdictionary = new Dictionary<string, List<GameObject>>();
     public Dictionary<string, List<GameObject>> snakedictionary = new Dictionary<string, List<GameObject>>();
     public GameObject Rolling_3Ddice;
+    
     public void Start()
     {
 
@@ -66,7 +68,7 @@ public class GameManagerSL : MonoBehaviour
                 player4.GetComponent<PlayerSL>().isPlayerTurn = false;
                 diceObject.currentPlayer = diceObject.redPlayer;
                 print("player1 turn");
-                RedPlayerCoroutine = StartCoroutine(iconBlink1.startBlink());           
+                RedPlayerCoroutine = StartCoroutine(iconBlink1.startBlink());                
 
             }
             else if (count == 2)
