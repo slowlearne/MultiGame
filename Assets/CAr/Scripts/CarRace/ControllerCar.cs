@@ -76,7 +76,7 @@ public class ControllerCar : MonoBehaviour
     {
         foreach (var wheel in wheels)
         {
-            wheel.wheelCollider.motorTorque = moveInput * 200 * maxAcceleration;
+            wheel.wheelCollider.motorTorque = moveInput * 10 * maxAcceleration;
            
         }
     }
@@ -87,8 +87,8 @@ public class ControllerCar : MonoBehaviour
         {
             if (wheel.axel == Axel.Front)
             {
-                var _steerAngle = steerInput * turnSensitivity * maxSteerAngle;
-                wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, _steerAngle, 0.6f);
+                var _steerAngle = steerInput  * maxSteerAngle;
+                wheel.wheelCollider.steerAngle = Mathf.Lerp(wheel.wheelCollider.steerAngle, _steerAngle, 1f);
             }
         }
     }

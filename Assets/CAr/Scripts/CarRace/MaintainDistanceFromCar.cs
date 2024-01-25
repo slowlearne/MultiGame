@@ -27,8 +27,8 @@ public class MaintainDistanceFromCar : MonoBehaviour
     public void ShowTheInstantiatedOption()
     {
         print("After 3 seconds, the Options Has appeared");
-        item1.transform.position = new Vector3(-5.67f, 2f, player.position.z + 90f);
-        item2.transform.position = new Vector3(5f, 2f, player.position.z + 90f);
+        item1.transform.position = new Vector3(-5.67f, 3f, player.position.z + 90f);
+        item2.transform.position = new Vector3(5f, 3f, player.position.z + 90f);
 
     }
 }
