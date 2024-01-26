@@ -12,33 +12,40 @@ public class SceneLoader : MonoBehaviour
     public string snakeLadderScene;
     public string puzzleScene;
     public string chessScene;
-
+    
     public void LoadBoatScene()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         SceneManager.LoadScene(boatScene);
     }
     public void LoadScrableScene()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         SceneManager.LoadScene(scrableScene);
     }
     public void LoadCarScene()
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         SceneManager.LoadScene(carScene);
     }
     public void LoadPianoScene()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         SceneManager.LoadScene(pianoScene);
     }
     public void LoadSnakeladderScene()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         SceneManager.LoadScene(snakeLadderScene);
     }
     public void PuzzleScene()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         SceneManager.LoadScene(puzzleScene);
     }
     public void ChessScene()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         SceneManager.LoadScene(chessScene);
     }
 }

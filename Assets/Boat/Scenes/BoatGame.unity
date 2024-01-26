@@ -12141,8 +12141,8 @@ MonoBehaviour:
     incorrectOptionAdd: 11
     correctOptionSubtract: 6
     incorrectOptionSubtract: 5
-    correctOptionMultiply: 18
-    incorrectOptionMultiply: 16
+    correctOptionMultiply: 27
+    incorrectOptionMultiply: 28
     correctOptionDivide: 3
     incorrectOptionDivide: 2
   - var1: 45
@@ -42677,6 +42677,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7778110300738132474, guid: 6861759bf5f20af4fac4574da912cfd5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 705063e642d94904dad0894ecda76fce,
+        type: 3}
     - target: {fileID: 7801582562387035435, guid: 6861759bf5f20af4fac4574da912cfd5,
         type: 3}
       propertyPath: m_Name

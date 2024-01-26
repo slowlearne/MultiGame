@@ -13166,7 +13166,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8415806, g: 0.86561054, b: 0.9056604, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -20467,6 +20467,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7778110300738132474, guid: 6861759bf5f20af4fac4574da912cfd5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 705063e642d94904dad0894ecda76fce,
+        type: 3}
     - target: {fileID: 7801582562387035435, guid: 6861759bf5f20af4fac4574da912cfd5,
         type: 3}
       propertyPath: m_Name
