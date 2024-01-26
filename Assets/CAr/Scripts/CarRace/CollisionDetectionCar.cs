@@ -26,6 +26,8 @@ public class CollisionDetectionCar : MonoBehaviour
 {
     public PlayerScriptCar playerMovement;
     private Quaternion originalRotation;
+    public AudioSource crashAudioSource;
+    public AudioClip crashSound;
 
     void Start()
     {
@@ -39,13 +41,14 @@ public class CollisionDetectionCar : MonoBehaviour
         {
             Debug.Log("We hit an obstacle");
             playerMovement.enabled = false;
+            crashAudioSource.PlayOneShot(crashSound);
             Debug.Log("Movement halted");
             FindObjectOfType<GamemanagerCar>().EndGame();
 
             // Reset the rotation using Quaternion.Lerp
             
         }
-        /*StartCoroutine(RotateBackToOriginalRotation());*/
+        StartCoroutine(RotateBackToOriginalRotation());
     }
 
     IEnumerator RotateBackToOriginalRotation()
