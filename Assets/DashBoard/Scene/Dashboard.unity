@@ -344,7 +344,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100310337}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 735f6758ae011fb4c8206200201a60ec, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 4c2d83bd393c3a748868bc6381fe837d, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -899,7 +899,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776485263}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: feed0c03ca480c34fa4ad3cb8b1d15f1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d70cc60e31103084f992c65f059c5303, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -913,14 +913,12 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 0.2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 01
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -1338,7 +1336,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 700}
+  m_SizeDelta: {x: 900, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517571334
 MonoBehaviour:
@@ -1404,7 +1402,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517571332}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 91759ecbb1b12e044817589c422de1c1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 60985166f766b3547a4306f9ec3d116c, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1637,7 +1635,6 @@ MonoBehaviour:
   snakeLadderScene: SnakeLadder
   puzzleScene: JIgsawPuzzle
   chessScene: Chess
-  orientationController: {fileID: 2103526451}
 --- !u!4 &1528213322
 Transform:
   m_ObjectHideFlags: 0
