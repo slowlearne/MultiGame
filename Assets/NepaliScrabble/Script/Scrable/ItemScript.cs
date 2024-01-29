@@ -96,7 +96,11 @@ public class ItemScript : MonoBehaviour, IPointerEnterHandler, IPointerUpHandler
                 Debug.Log("not same words");
             }
         }
-        StartCoroutine(levelObj.DelayTimeBeforeLevelComplete());
+        /*StartCoroutine(levelObj.DelayTimeBeforeLevelComplete());*/
+        if (levelObj.IsLevelFinished())
+        {
+            StartCoroutine(levelObj.DelayTimeBeforeLevelComplete());
+        }
         
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,7 +15,10 @@ public class LevelManager : MonoBehaviour
     
     [Header("ParentHolder")]
     public GameObject ParentHolder;
-    
+
+    [Header("ButtonScriptN")]
+    public ButtonScriptN buttonScriptObj;
+
     public GameObject animationText, ImageObject,ImageObject1, instantiatedItem,instantiatedItemOnLevel,levelToSubSplit;
     public List<GameObject> instantiatedSubWords = new List<GameObject>();
     
@@ -29,6 +33,7 @@ public class LevelManager : MonoBehaviour
     public List<string> totalConnectedWordList;
     public AudioClip play_Clip_On_CorrectWord;
     public AudioSource audioPlayer_LEC;
+   
     void OnEnable()
     {
         
@@ -177,12 +182,12 @@ public class LevelManager : MonoBehaviour
 
     public IEnumerator DelayTimeBeforeLevelComplete()
     {
-        
-        if (totalConnectedWordList.Count == listOfSubstring.Count)
-        {
+
+        /*if (totalConnectedWordList.Count == listOfSubstring.Count)
+        {*/
             showConnectedWord.text = "";
             string[] arrayForAnimationText = { "Amazing!", "Great job!", "Superb!", "Well done!", "Perfect!", "Marvelous!" };
-            int value = Random.Range(0, 6);
+            int value = UnityEngine.Random.Range(0, 6);
             TMP_Text textanim=animationText.GetComponent<TMP_Text>();
             textanim.text = arrayForAnimationText[value];
 
@@ -199,9 +204,52 @@ public class LevelManager : MonoBehaviour
            ItemScriptObj.lineManagerGameObject.SetActive(false);
             UndoInstantiatedObjects();
             GameManagerObj.GameOver();
+        /*}
+        showConnectedWord.text = "";
+        List_for_letter.Clear();*/
+    }
+
+    public bool IsLevelFinished()
+    {
+        if (totalConnectedWordList.Count == listOfSubstring.Count)
+        {
+            return true;
+        }
+        else if (AreStringsEqual())
+        {
+            return true;
         }
         showConnectedWord.text = "";
         List_for_letter.Clear();
+        return false;
+        
     }
+    public bool AreStringsEqual()
+    {
+        for (int j = 0; j < listOfSubstring.Count; j++)
+        {
+            string trimmedStr = listOfSubstring[j].word.Replace(" ", "");
 
+            string combined_Words_To_Check_From_Hint;
+            string[] arrayOfChildHolderText;
+            arrayOfChildHolderText = new string[listOfSubstring[j].noToSplit];
+            int numberToSplit = listOfSubstring[j].noToSplit;
+
+            for (int k = 0; k < numberToSplit; k++)
+            {
+                TMP_Text childContainingText = ParentHolder.transform.GetChild(j).transform.GetChild(numberToSplit - 2).transform.GetChild(k).transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>();
+                arrayOfChildHolderText[k] = childContainingText.text;
+
+            }
+
+            combined_Words_To_Check_From_Hint = string.Join("", arrayOfChildHolderText);
+
+            if (!string.Equals(combined_Words_To_Check_From_Hint, trimmedStr, StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+            
+        }
+        return true;
+    }
 }

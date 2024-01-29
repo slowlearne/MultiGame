@@ -24,6 +24,7 @@ public class ButtonScriptN : MonoBehaviour, IPointerDownHandler
     GameObject coinNotify;
     GameObject showAddButton;
     public List<Transform> OnButtonClick_new_List = new List<Transform>();
+    public static bool islevelCompleteFromHint;
     private void Start()
     {
         coinNotify = GameObject.Find("CoinNotification");
@@ -92,9 +93,9 @@ public class ButtonScriptN : MonoBehaviour, IPointerDownHandler
 
     public void OnHintButtonClick()
     {
+        
         if (gameManagerObj.coinValue >= 10)
         {
-            
             
             for (int j = 0; j < levelManagerObj.listOfSubstring.Count; j++)
             {
@@ -131,6 +132,7 @@ public class ButtonScriptN : MonoBehaviour, IPointerDownHandler
             print("not enough coin");
             StartCoroutine(CoinMsgNotify());
         }
+        IsLevelCompleteWhenHintPressed();
 
     }
 
@@ -141,4 +143,18 @@ public class ButtonScriptN : MonoBehaviour, IPointerDownHandler
         yield return new WaitForSeconds(0.5f);
         coinNotify.SetActive(false);
     }
+
+    public void IsLevelCompleteWhenHintPressed()
+    {
+        if (levelManagerObj.AreStringsEqual())
+        {
+            islevelCompleteFromHint = true;
+            print("To nextLevel");
+           StartCoroutine( levelManagerObj.DelayTimeBeforeLevelComplete());
+        }
+        else
+        {
+            print("Waiting for level to complete");
+        }
+    } 
 }
