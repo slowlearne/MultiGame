@@ -1034,7 +1034,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 02c1d7b7d40fa6c4dbf1b8fea7c14fac, type: 3}
   initialSpeed: 10
   acceleration: 1
-  sideSpeed: 10
+  sideSpeed: 8
   rotationSpeed: 200
   wheels:
   - wheelModel: {fileID: 358198848}
@@ -1619,123 +1619,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e31725b3f281242b76acf506024fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionList:
-  - var1: 9
-    var2: 3
-    question: 
-    correctOptionAdd: 12
-    incorrectOptionAdd: 11
-    correctOptionSubtract: 6
-    incorrectOptionSubtract: 7
-    correctOptionMultiply: 27
-    incorrectOptionMultiply: 21
-    correctOptionDivide: 3
-    incorrectOptionDivide: 4
-  - var1: 12
-    var2: 4
-    question: 
-    correctOptionAdd: 16
-    incorrectOptionAdd: 18
-    correctOptionSubtract: 8
-    incorrectOptionSubtract: 9
-    correctOptionMultiply: 48
-    incorrectOptionMultiply: 46
-    correctOptionDivide: 3
-    incorrectOptionDivide: 4
-  - var1: 10
-    var2: 5
-    question: 
-    correctOptionAdd: 15
-    incorrectOptionAdd: 51
-    correctOptionSubtract: 5
-    incorrectOptionSubtract: 3
-    correctOptionMultiply: 50
-    incorrectOptionMultiply: 05
-    correctOptionDivide: 2
-    incorrectOptionDivide: 5
-  - var1: 20
-    var2: 10
-    question: 
-    correctOptionAdd: 30
-    incorrectOptionAdd: 21
-    correctOptionSubtract: 10
-    incorrectOptionSubtract: 01
-    correctOptionMultiply: 200
-    incorrectOptionMultiply: 210
-    correctOptionDivide: 2
-    incorrectOptionDivide: 3
-  - var1: 14
-    var2: 7
-    question: 
-    correctOptionAdd: 21
-    incorrectOptionAdd: 20
-    correctOptionSubtract: 7
-    incorrectOptionSubtract: 8
-    correctOptionMultiply: 98
-    incorrectOptionMultiply: 96
-    correctOptionDivide: 2
-    incorrectOptionDivide: 3
-  - var1: 24
-    var2: 3
-    question: 
-    correctOptionAdd: 27
-    incorrectOptionAdd: 28
-    correctOptionSubtract: 21
-    incorrectOptionSubtract: 20
-    correctOptionMultiply: 72
-    incorrectOptionMultiply: 78
-    correctOptionDivide: 8
-    incorrectOptionDivide: 9
-  - var1: 36
-    var2: 3
-    question: 
-    correctOptionAdd: 39
-    incorrectOptionAdd: 40
-    correctOptionSubtract: 33
-    incorrectOptionSubtract: 32
-    correctOptionMultiply: 108
-    incorrectOptionMultiply: 106
-    correctOptionDivide: 12
-    incorrectOptionDivide: 13
-  - var1: 25
-    var2: 5
-    question: 
-    correctOptionAdd: 30
-    incorrectOptionAdd: 31
-    correctOptionSubtract: 20
-    incorrectOptionSubtract: 19
-    correctOptionMultiply: 125
-    incorrectOptionMultiply: 105
-    correctOptionDivide: 5
-    incorrectOptionDivide: 4
-  - var1: 30
-    var2: 6
-    question: 
-    correctOptionAdd: 36
-    incorrectOptionAdd: 35
-    correctOptionSubtract: 24
-    incorrectOptionSubtract: 22
-    correctOptionMultiply: 180
-    incorrectOptionMultiply: 188
-    correctOptionDivide: 5
-    incorrectOptionDivide: 6
-  - var1: 40
-    var2: 10
-    question: 
-    correctOptionAdd: 50
-    incorrectOptionAdd: 41
-    correctOptionSubtract: 30
-    incorrectOptionSubtract: 35
-    correctOptionMultiply: 400
-    incorrectOptionMultiply: 401
-    correctOptionDivide: 4
-    incorrectOptionDivide: 5
   QuestionDisplayGameObject: {fileID: 780755935}
   Option1: {fileID: 0}
   Option2: {fileID: 0}
   Counter: 0
   op: 
-  correctOption: 
+  OprForIncorrect: 
+  result: 0
 --- !u!1 &795802676
 GameObject:
   m_ObjectHideFlags: 0

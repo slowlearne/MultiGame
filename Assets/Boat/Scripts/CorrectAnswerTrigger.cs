@@ -19,11 +19,9 @@ public class CorrectAnswerTrigger : MonoBehaviour
     {
         TMP_Text checkOptionText = this.gameObject.GetComponent<TMP_Text>();
         Debug.Log("the Triggered Option text is " + checkOptionText.text);
-        if (checkOptionText.text == questionObj.correctOption)
+        if (checkOptionText.text == questionObj.result.ToString())
         {
             print("The player entered through Correct option");
-            /*questionObj.Option1.transform.position += Vector3.forward * 100f;
-            questionObj.Option2.transform.position += Vector3.forward * 100f;*/
             maintainDistanceFromCubeObj.ShowTheInstantiatedOption();
             questionObj.IfChosenCorrectOption();
         }

@@ -57,25 +57,26 @@ public class PlayerScriptCar : MonoBehaviour
     {
         if (countdownTimerObj.canMove)
         {
-
-           
-           
-            /*rb.AddForce(0, 0, forwardForce * Time.fixedDeltaTime);   */                // Move Player forward
-
-            transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
-            currentSpeed += acceleration * Time.deltaTime;
-            float horizontalInput = Input.GetAxis("Horizontal");
-            transform.Translate(Vector3.right * horizontalInput * sideSpeed * Time.deltaTime);
             AnimateWheels();
-          
+
             if (transform.position.y < -1f)
             {
                 gamemanagerCarObj.EndGame();
             }
+#if UNITY_EDITOR
+            HandleEditorsInput();
+#else
+            HandleTouchInput();
+#endif
+            
         }
-        
-        // Handle touch input for left and right movement
-        /*HandleTouchInput();*/
+    }
+    void HandleEditorsInput()
+    {
+        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
+        currentSpeed += acceleration * Time.deltaTime;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * horizontalInput * sideSpeed * Time.deltaTime);
     }
     void AnimateWheels()
     {
@@ -125,19 +126,3 @@ public class PlayerScriptCar : MonoBehaviour
         }
     }
 }
-    
-
-
-/*public float speed = 10.0f;
-private Rigidbody rb;
-
-void Start()
-{
-    rb = GetComponent<Rigidbody>();
-}
-
-void FixedUpdate()
-{
-    float moveZ = Input.GetAxis("Vertical") * speed;
-    rb.MovePosition(rb.position + transform.forward * moveZ * Time.fixedDeltaTime);
-}*/
