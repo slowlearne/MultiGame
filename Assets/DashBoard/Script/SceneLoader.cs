@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class SceneLoader : MonoBehaviour
     public string snakeLadderScene;
     public string puzzleScene;
     public string chessScene;
-    
+    private void Awake()
+    {
+        Screen.orientation =ScreenOrientation.LandscapeLeft;
+    }
     public void LoadBoatScene()
     {
         Screen.orientation = ScreenOrientation.Portrait;

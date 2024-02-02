@@ -6153,6 +6153,7 @@ MonoBehaviour:
   lineManagerObj: {fileID: 1222232028}
   GameManagerObj: {fileID: 168599729}
   ParentHolder: {fileID: 146127409}
+  buttonScriptObj: {fileID: 0}
   animationText: {fileID: 690793168}
   ImageObject: {fileID: 81109287}
   ImageObject1: {fileID: 1081654157}
