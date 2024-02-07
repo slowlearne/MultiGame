@@ -29,7 +29,23 @@ public class ButtonScriptN : MonoBehaviour, IPointerDownHandler
     {
         coinNotify = GameObject.Find("CoinNotification");
         showAddButton = GameObject.Find("ShowRewardedAddBtn");
+        if (coinNotify.activeInHierarchy)
+        {
+            print("coin notify is active");
+        }
+        else
+        {
+            print("coin Notify is not active");
+        }
         coinNotify.SetActive(false);
+        if (coinNotify.activeInHierarchy)
+        {
+            print("coin notify is active");
+        }
+        else
+        {
+            print("coin Notify is not active");
+        }
         gameObject.GetComponent<Button>().onClick.AddListener(OnRollButtonClick);
         gameManagerObj.hintHolder.GetComponent<Button>().onClick.AddListener(OnHintButtonClick);
         showAddButton.GetComponent<Button>().onClick.AddListener(OnAddButtonClick);
@@ -156,5 +172,10 @@ public class ButtonScriptN : MonoBehaviour, IPointerDownHandler
         {
             print("Waiting for level to complete");
         }
-    } 
+    }
+    
+    void OnDestroy()
+    {
+        print("the button script gameobject is destroyed");
+    }
 }

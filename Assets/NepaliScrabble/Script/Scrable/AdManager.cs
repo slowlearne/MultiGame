@@ -8,19 +8,19 @@ using UnityEngine.UIElements;
 public class AdManager : MonoBehaviour
 {
     public GameManagerN gameManagerObj;
-    /*public string appId = "ca-app-pub-3940256099942544~3347511713";*//*"ca-app-pub-2491483472241876~8536357768";*/
+    public string appId = "ca-app-pub-3940256099942544~3347511713";/*"ca-app-pub-2491483472241876~8536357768";*/
 
-    /*#if UNITY_ANDROID*/
+#if UNITY_ANDROID
     string bannerId = "ca-app-pub-3940256099942544/6300978111"; /*"ca-app-pub-2491483472241876/4862768269";*/
     string interId = "ca-app-pub-3940256099942544/1033173712"; /*"ca-app-pub-2491483472241876/3280161658";*/
     string rewardedId = "ca-app-pub-3940256099942544/5224354917";/*"ca-app-pub-2491483472241876/6219285805";*/
 
-/*#elif UNITY_IPHONE
+#elif UNITY_IPHONE
     string bannerId = "ca-app-pub-2491483472241876/4862768269";
     string interId = "ca-app-pub-2491483472241876/3280161658";
     string rewardedId = "ca-app-pub-2491483472241876/6219285805";
 
-#endif*/
+#endif
 
     BannerView bannerView;
     private InterstitialAd _interstitialAd;

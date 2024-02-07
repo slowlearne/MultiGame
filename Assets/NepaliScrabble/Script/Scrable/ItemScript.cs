@@ -104,5 +104,8 @@ public class ItemScript : MonoBehaviour, IPointerEnterHandler, IPointerUpHandler
         
     }
 
-   
+   void OnDestroy()
+    {
+        print("itemScript Gameobject is destroyed");
+    }
 }

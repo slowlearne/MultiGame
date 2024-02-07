@@ -33,7 +33,11 @@ public class LevelManager : MonoBehaviour
     public List<string> totalConnectedWordList;
     public AudioClip play_Clip_On_CorrectWord;
     public AudioSource audioPlayer_LEC;
-   
+
+    private void OnDestroy()
+    {
+        print("the levelManagerScript gameobject is destroyed");
+    }
     void OnEnable()
     {
         
